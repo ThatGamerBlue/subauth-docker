@@ -10,17 +10,17 @@ Clone this repository to a folder on your machine
 WebApp Component:  
 - Build the [subauth-server](https://github.com/ThatGamerBlue/subauth-server) project  
 - Put the resulting jar file in `webapp/subauth.jar`  
-- Fill out the env.json file in `webapp/env.json` according to the spec in the [server readme](https://github.com/ThatGamerBlue/subauth-server/blob/master/README.md)  
+- Copy `webapp/env.example.json` to `webapp/env.json` and fill it out according to the spec in the [server readme](https://github.com/ThatGamerBlue/subauth-server/blob/master/README.md)  
 
 Minecraft Component:
 - Build the [subauth-backend-plugin](https://github.com/ThatGamerBlue/subauth-backend-plugin) project  
 - Put the resulting jar file in `minecraft/plugins/`  
 - Grab the latest PaperMC from [their website](https://papermc.io)  
 - Put the jar file in `minecraft/paper.jar`  
-- Fill out the backend plugin config in `minecraft/plugins/SubAuth-Backend/config.yml` according to the [readme](https://github.com/ThatGamerBlue/subauth-backend-plugin/blob/master/README.md)  
+- Copy `minecraft/plugins/SubAuth-Backend/config.example.yml` to `minecraft/plugins/SubAuth-Backend/config.yml` and fill it out according to the [readme](https://github.com/ThatGamerBlue/subauth-backend-plugin/blob/master/README.md)  
 
 Postgres Component:
-- Set the postgres password in postgres.env  
+- Copy `postgres.example.env` to `postgres.env` and set the postgres password inside 
 
 Running:
 - Run `docker compose up -d`  
