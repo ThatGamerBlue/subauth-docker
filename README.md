@@ -25,4 +25,4 @@ Postgres Component:
 Running:
 - Run `docker compose up -d`  
 The webapp service will be exposed on your machine's port 32400  
-The minecraft service will be exposed on your machine's port 25565 
+The minecraft service will be exposed on your machine's port 32401 
