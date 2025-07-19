@@ -18,6 +18,7 @@ Minecraft Component:
 - Grab the latest PaperMC from [their website](https://papermc.io)  
 - Put the jar file in `minecraft/paper.jar`  
 - Copy `minecraft/plugins/SubAuth-Backend/config.example.yml` to `minecraft/plugins/SubAuth-Backend/config.yml` and fill it out according to the [readme](https://github.com/ThatGamerBlue/subauth-backend-plugin/blob/master/README.md)  
+- Install the latest versions of ViaVersion and ViaBackwards.  
 
 Postgres Component:
 - Copy `postgres.example.env` to `postgres.env` and set the postgres password inside 
