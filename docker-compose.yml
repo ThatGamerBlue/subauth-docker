@@ -11,7 +11,7 @@ services:
   adminer:
     image: adminer
     ports:
-      - 32500:8080
+      - 127.0.0.1:32500:8080
     restart: always
     environment:
       - ADMINER_DEFAULT_SERVER=postgres
@@ -27,7 +27,7 @@ services:
     working_dir: /opt/webapp/
     entrypoint: java -jar subauth.jar
     ports:
-      - 32400:8080
+      - 127.0.0.1:32400:8080
     depends_on:
       - postgres
 
