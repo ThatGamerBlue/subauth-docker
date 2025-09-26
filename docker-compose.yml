@@ -8,6 +8,16 @@ services:
         target: /var/lib/postgresql/data
     env_file: postgres.env
   
+  adminer:
+    image: adminer
+    ports:
+      - 32500:8080
+    restart: always
+    environment:
+      - ADMINER_DEFAULT_SERVER=postgres
+    depends_on:
+      - postgres
+
   webapp:
     image: amazoncorretto:21
     volumes:

@@ -22,8 +22,10 @@ Minecraft Component:
 
 Postgres Component:
 - Copy `postgres.example.env` to `postgres.env` and set the postgres password inside 
+- This compose file comes with adminer pre-installed. It will be exposed on your machine's port 32500 by default, **make sure this port is not exposed externally!**
 
 Running:
 - Run `docker compose up -d`  
 The webapp service will be exposed on your machine's port 32400  
-The minecraft service will be exposed on your machine's port 32401 
+The minecraft service will be exposed on your machine's port 32401  
+The adminer service will be exposed on your machine's port 32500, **make sure this port is not exposed externally!**
