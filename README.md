@@ -22,10 +22,10 @@ Minecraft Component:
 
 Postgres Component:
 - Copy `postgres.example.env` to `postgres.env` and set the postgres password inside 
-- This compose file comes with adminer pre-installed. It will be exposed on your machine's port 32500 by default, **make sure this port is not exposed externally!**
+- This compose file comes with adminer pre-installed. It will be exposed on your machine's port 32500 by default, but only on interface 127.0.0.1.
 
 Running:
 - Run `docker compose up -d`  
-The webapp service will be exposed on your machine's port 32400  
-The minecraft service will be exposed on your machine's port 32401  
-The adminer service will be exposed on your machine's port 32500, **make sure this port is not exposed externally!**
+- The webapp service will be exposed on your machine's port 32400, but only on interface 127.0.0.1. Make sure you place it behind a reverse proxy of some sort to provide SSL encryption and public access.  
+- The minecraft service will be exposed on your machine's port 32401. This is publically accessible by default, if you wish to proxy it via bungee or similar, add `127.0.0.1:` before the port in the `docker-compose.yml`, and configure bungee to connect to the server on the port.  
+- The adminer service will be exposed on your machine's port 32500, but only on interface 127.0.0.1. You can either place it behind a reverse proxy with appropriate security settings, or leave it as default to access the service only from the machine it's running on.
